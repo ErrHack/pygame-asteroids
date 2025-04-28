@@ -1,26 +1,26 @@
-import pygame as p
-import constants as C
+import pygame
+from constants import *
 
 def main():
 	
-	p.init()
+	pygame.init()
 	
 	print("Starting Asteroids!")
-	print(f"Screen width: {C.SCREEN_WIDTH}")
-	print(f"Screen height: {C.SCREEN_HEIGHT}")
+	print(f"Screen width: {SCREEN_WIDTH}")
+	print(f"Screen height: {SCREEN_HEIGHT}")
 	
-	screen = p.display.set_mode( (C.SCREEN_WIDTH, C.SCREEN_HEIGHT) )
-	clock = p.time.Clock()
+	screen = pygame.display.set_mode( (SCREEN_WIDTH, SCREEN_HEIGHT) )
+	clock = pygame.time.Clock()
 	dt = 0
 	
 	while True:
 
-		for event in p.event.get():
-			if event.type == p.QUIT:
+		for event in pygame.event.get():
+			if event.type == pygame.QUIT:
 				return
 			
 		screen.fill("black")
-		p.display.flip()
+		pygame.display.flip()
 
 		dt = clock.tick(60) / 1000
 		print(dt)
