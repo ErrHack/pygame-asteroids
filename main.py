@@ -29,6 +29,7 @@ def main():
 				return
 			
 		screen.fill("black")
+		player.update(dt)
 		player.draw(screen)
 		pygame.display.flip()
 
@@ -36,7 +37,7 @@ def main():
 
 		print_count += 1
 		if print_count >= 60 * 5:
-			print(dt)
+			print(f"print_count: {print_count}, dt: {dt}")
 			print_count = 0
 
 

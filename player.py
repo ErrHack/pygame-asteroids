@@ -1,7 +1,7 @@
 import pygame
 from circleshape import CircleShape
 
-from constants import PLAYER_RADIUS
+from constants import PLAYER_RADIUS, PLAYER_TURN_SPEED
 
 
 class Player(CircleShape):
@@ -26,3 +26,13 @@ class Player(CircleShape):
         except TypeError as t:
             print(t)
     
+    def rotate(self, dt):
+        self.rotation += PLAYER_TURN_SPEED * dt
+        print(f"ROTATION: {self.rotation}")
+
+        
+    def update(self, dt):
+        keys = pygame.key.get_pressed()
+
+        if keys[pygame.K_a] or keys[pygame.K_LEFT]: self.rotate(-dt) # rotate left
+        if keys[pygame.K_d] or keys[pygame.K_RIGHT]: self.rotate(dt)  # rotate right
