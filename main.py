@@ -10,6 +10,8 @@ def main():
 	print(f"Screen height: {C.SCREEN_HEIGHT}")
 	
 	screen = p.display.set_mode( (C.SCREEN_WIDTH, C.SCREEN_HEIGHT) )
+	clock = p.time.Clock()
+	dt = 0
 	
 	while True:
 
@@ -19,6 +21,9 @@ def main():
 			
 		screen.fill("black")
 		p.display.flip()
+
+		dt = clock.tick(60) / 1000
+		print(dt)
 
 
 if __name__ == "__main__":
