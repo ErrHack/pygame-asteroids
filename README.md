@@ -1,5 +1,21 @@
+
 # pygame-asteroids
+
+_**How to play**_
+
+* move forward:
+  - \<__w__ key\> or \<__Up__ Arrow\>
+* move back:
+  - \<__s__ key\> or \<__Down__ Arrow\>
+* rotate left:
+  - \<__a__ key\> or \<__Left__ Arrow\>
+* rotate right:
+  - \<__d__ key\> or \<__Right__ Arrow\>
+* shoot:
+  - \<__Space__ Bar\>
+
 ## future update ideas
+
 * Add a scoring system
 * Implement multiple lives and respawning
 * Add an explosion effect for the asteroids
