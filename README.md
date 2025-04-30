@@ -39,3 +39,4 @@
   - will the asteroid drop powerups after they are completly destroyed or will they generate randomly?
 * Add bombs that can be dropped
   - will the asteroid drop items after they are completly destroyed or will they generate randomly?
+* add sounds and music
